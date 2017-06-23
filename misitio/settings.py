@@ -20,7 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
+SECRET_KEY = 'd)f$!s*88t5da$$66*8+)6#0m-dtunu1^+@+^(^9&z$ppsxc7w'
+=======
 SECRET_KEY = '2vxe5&7u4qb4^*ea5qw=qa&7u+n#@53bqsp(z1+qg_li#12%u$'
+>>>>>>> 9fe5a9f9bb5b36bc8ee5623258723785406072bf
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +41,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+    'viaje',
+=======
+>>>>>>> 9fe5a9f9bb5b36bc8ee5623258723785406072bf
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,7 +95,11 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
+<<<<<<< HEAD
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
+=======
 TIME_ZONE = 'UTC'
+>>>>>>> 9fe5a9f9bb5b36bc8ee5623258723785406072bf
 
 USE_I18N = True
 
@@ -100,3 +112,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+=======
+>>>>>>> 9fe5a9f9bb5b36bc8ee5623258723785406072bf
