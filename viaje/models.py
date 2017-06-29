@@ -11,6 +11,9 @@ class Usuario(models.Model):
     correoElectronico = models.EmailField(max_length=200)
     telefono = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.nombre
+
 
 class Vuelo(models.Model):
     lugar = models.ForeignKey('Destino')
@@ -19,16 +22,25 @@ class Vuelo(models.Model):
     nombreDeVuelo = models.CharField(max_length=200)
 
 
+    def __str__(self):
+        return self.nombreDeVuelo
+
 class Hotel(models.Model):
     nombre = models.CharField(max_length=200)
     lugar = models.ForeignKey('Destino')
     precio = models.FloatField()
+
+    def __str__(self):
+        return self.nombre
 
 
 class Excursion(models.Model):
     nombre = models.CharField(max_length=200)
     lugar = models.ForeignKey('Destino')
     precio = models.FloatField()
+
+    def __str__(self):
+        return self.nombre
 
 
 class Paquete(models.Model):
@@ -38,6 +50,10 @@ class Paquete(models.Model):
     nombre = models.CharField(max_length=200)
     precio = models.FloatField()
 
-
+    def __str__(self):
+        return self.nombre
 class Destino(models.Model):
     destino = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.destino

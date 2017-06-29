@@ -1,8 +1,13 @@
 from django.shortcuts import render
-from .models import Usuario
+from .models import Paquete
+from .models import Vuelo
 
 
 # Create your views here.
 def lista_viaje(request):
-    usuarios = Usuario.objects.order_by('nombre')
-    return render(request, 'viaje/lista_viaje.html', {'usuarios': usuarios})
+    paquetesvar = Paquete.objects.order_by('nombre')
+    return render(request, 'viaje/lista_viaje.html', {'paquetes': paquetesvar})
+
+def listar_vuelos(request):
+    vuelosvar = Vuelo.objects.all()
+    return render(request, 'viaje/lista_vuelos.html', {'vuelos': vuelosvar})
