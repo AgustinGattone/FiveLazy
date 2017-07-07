@@ -17,8 +17,8 @@
 		<title></title>
 		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no" />
-		<link rel="icon" href="{% static 'images/favicon.ico' %}">
-		<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" />
+		<!--<link rel="icon" href="{% static 'images/favicon.ico' %}">-->
+		<!--<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" />-->
 		<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
 		<link rel="stylesheet" href="{% static 'css/camera.css' %}">
 		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
@@ -37,6 +37,11 @@
 		<script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
 		<!--<![endif]-->
 		<script src="{% static 'booking/js/booking.js' %}"></script>
+        <script src="{% static 'booking/js/jquery-ui-1.10.3.custom.min.js' %}"></script>
+        <script src="{% static 'booking/js//jquery.fancyform.js' %}"></script>
+        <script src="{% static 'booking/js/jquery.placeholder.js' %}"></script>
+        <script src="{% static 'booking/js/regula.js' %}"></script>
+
 		<script>
 			$(document).ready(function(){
 			jQuery('#camera_wrap').camera({
@@ -106,7 +111,7 @@
 		</header>
 		<div class="slider_wrapper">
 			<div id="camera_wrap" class="">
-				<div data-src="images/slide.jpg">
+				<div data-src="{%  static 'images/slide.jpg' %}">
 					<div class="caption fadeIn">
 						<h2>LONDON</h2>
 						<div class="price">
@@ -116,7 +121,7 @@
 						<a href="#">LEARN MORE</a>
 					</div>
 				</div>
-				<div data-src="images/slide1.jpg">
+				<div data-src="{%  static 'images/slide1.jpg' %}">
 					<div class="caption fadeIn">
 						<h2>Maldives</h2>
 						<div class="price">
@@ -126,7 +131,7 @@
 						<a href="#">LEARN MORE</a>
 					</div>
 				</div>
-				<div data-src="images/slide2.jpg">
+				<div data-src="{%  static 'images/slide2.jpg' %}">
 					<div class="caption fadeIn">
 						<h2>Venice</h2>
 						<div class="price">
@@ -139,15 +144,15 @@
 			</div>
 		</div>
 <!--==============================Content=================================-->
-		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
+		<div class="content"><div class="ic"></div>
 			<div class="container_12">
 				<div class="grid_4">
 					<div class="banner">
 						<img src="{% static 'images/ban_img1.jpg' %}" alt="">
                         <div class="label">
-						<div class="title">{% from  %}</div>
-						<div class="price">FROM<span>$ 1000</span></div>
-                    </div>
+						<div class="title">SASASA</div>
+						<div class="price">FROM<span>$ 1.000</span></div>
+                        </div>
                     </div>
 				</div>
 				<div class="grid_4">
@@ -269,36 +274,6 @@
 							</div>
 						</div>
 					</blockquote>
-				</div>
-				<div class="grid_12">
-					<h3 class="head1">Latest News</h3>
-				</div>
-				<div class="grid_4">
-					<div class="block1">
-						<time datetime="2014-01-01">10<span>Jan</span></time>
-						<div class="extra_wrapper">
-							<div class="text1 col1"><a href="#">Aliquam nibh</a></div>
-							Proin pharetra luctus diam, any scelerisque eros convallisumsan. Maecenas vehicula egestas
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="block1">
-						<time datetime="2014-01-01">21<span>Jan</span></time>
-						<div class="extra_wrapper">
-							<div class="text1 col1"><a href="#">Etiam dui eros</a></div>
-							Any scelerisque eros vallisumsan. Maecenas vehicula egestas natis. Duis massa elit, auctor non
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="block1">
-						<time datetime="2014-01-01">15<span>Feb</span></time>
-						<div class="extra_wrapper">
-							<div class="text1 col1"><a href="#">uamnibh Edeto</a></div>
-							Ros convallisumsan. Maecenas vehicula egestas venenatis. Duis massa elit, auctor non
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
