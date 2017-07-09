@@ -49,7 +49,7 @@ class Paquete(models.Model):
     excursion = models.ForeignKey('Excursion')
     nombre = models.CharField(max_length=200)
     precio = models.FloatField()
-    upload = models.ImageField(upload_to='imagenes/')
+    imagen = models.ImageField(upload_to='viaje/static/images')
 
     def __str__(self):
         return self.nombre
@@ -58,3 +58,4 @@ class Destino(models.Model):
 
     def __str__(self):
         return self.destino
+
