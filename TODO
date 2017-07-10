@@ -1,0 +1,26 @@
+Feedback
+--------
+
+El sitio se ve muy bonito. Lamentablemente todo lo visual es estático, es decir,
+no se usa en absoluto la información de la base de datos para renderizar el sitio.
+Todo lo cargado en el admin resulta entonces en información inútil, y si quiero cambiar
+algo del sitio debo recurrir si o si a modificar el HTML.
+
+El sitio termina siendo un bonito template, sin ajustarse en nada a la información
+ni a lo aprendido a la materia.
+
+Esto no cumple con el objetivo de lo que se espera del proyecto, y por tanto
+esperamos que lo modifiquen de forma tal de cumplir con la entrega.
+
+Agrego a continuación una lista de pendientes a realizar en la proxima entrega:
+
+TODO
+----
+
+* Los links a "vuelos", "hoteles", "excursiones" y "contacto" deben ir a paginas que muestren dicha información.
+* El formulario de reserva, o bien debe poder realizar un reserva de forma efectiva, o bien debe desaparecer.
+* Los slides deben tomar la información que presentan de la base de datos
+* Los destinos debajo del template también deben salir de la base de datos
+* Los links a "Facebook", "Twitter", "Google+", etc. deben linkear a algún lado.
+* Se debe poder buscar un vuelo o un hotel en base a algún filtro.
+* Se debe poder reservar un hotel o un vuelo de alguna forma.
