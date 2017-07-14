@@ -9,7 +9,7 @@
                             <h1><a href="" >{{ excursion.lugar }}</a></h1>
                             <p>Precio: ${{ excursion.precio }} </p>
                             <img src="{{excursion.imagen.url}}" class="img_inner fleft" style="width:200px;height: 200px;">
-                            <a href="#" class="link1">Comprar Ahora</a>
+                            <a href="{% url 'views.comprar'  %}" class="link1">Comprar Ahora</a>
 
                         </div>
                     </div>

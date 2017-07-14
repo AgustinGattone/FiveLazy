@@ -8,8 +8,8 @@
                             <div class="title"> {{ paquete.nombre }}</div>
                             <h1><a href="" >{{ paquete.lugar }}</a></h1>
                             <p>Precio: ${{ paquete.precio}} </p>
-                            <img src="{{paquete.imagen.url}}" class="img_inner fleft">
-                            <a href="#" class="link1">Comprar Ahora</a>
+                            <img src="{{paquete.imagen.url}}" class="img_inner fleft" style="width:200px;height: 200px;">
+                            <a href="{% url 'views.comprar'  %}" class="link1">Comprar Ahora</a>
                         </div>
                     </div>
                 </div>
