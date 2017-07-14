@@ -1,9 +1,0 @@
-{% extends 'viaje/base.html' %}
-
-    {% block content %}
-        <h1>Nuevo Paquete</h1>
-        <form method="PAQUETE" class="paquete-form">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Save</button>
-        </form>
-    {% endblock %}
