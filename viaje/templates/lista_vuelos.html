@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% for paquete in paquetesvar %}
+            <div class="paquete">
+                <p>Nombre: {{ paquete.nombre }}</p>
+                <h1><a href="" >{{ paquete.hotel }}</a></h1>
+                <p>Precio: {{ paquete.precio|linebreaksbr }}</p>
+                <a><img src ="{{ paquete.imagen }}"></a>
+            </div>
+        {% endfor %}
+    {% endblock content %}
+          

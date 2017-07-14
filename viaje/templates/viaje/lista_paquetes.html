@@ -1,0 +1,11 @@
+{% extends 'viaje/base.html' %}
+    {% block content %}
+        {% for paquete in paquetes %}
+            <div class="paquete">
+                <p>Nombre del paquete: {{ paquete.nombre }}</p>
+                <h1><a href="" >{{ paquete.lugar }}</a></h1>
+                <p>Precio: {{ paquete.precio|linebreaksbr }}</p>
+                <img src= "{{paquete.imagen}}">
+            </div>
+        {% endfor %}
+    {% endblock content %}

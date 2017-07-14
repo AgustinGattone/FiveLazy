@@ -1,0 +1,11 @@
+{% extends 'viaje/base.html' %}
+    {% block content %}
+        {% for excursion in excursiones %}
+            <div class="excursion">
+                <p>Nombre de la excursion: {{ excursion.nombre }}</p>
+                <h1><a href="" >{{ excursion.lugar }}</a></h1>
+                <p>Precio: {{ excursion.precio|linebreaksbr }}</p>
+                <img src= "{{excursion.imagen}}">
+            </div>
+        {% endfor %}
+    {% endblock content %}

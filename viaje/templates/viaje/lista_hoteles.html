@@ -1,0 +1,11 @@
+{% extends 'viaje/base.html' %}
+    {% block content %}
+        {% for hotel in hoteles %}
+            <div class="hotel">
+                <p>Nombre del hotel: {{ hotel.nombre }}</p>
+                <h1><a href="" >{{ hotel.lugar }}</a></h1>
+                <p>Precio: {{ hotel.precio|linebreaksbr }}</p>
+                <img src= "{{hotel.imagen}}">
+            </div>
+        {% endfor %}
+    {% endblock content %}
