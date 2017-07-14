@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..')
+SITE_ROOT = PROJECT_ROOT
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -40,7 +43,7 @@ INSTALLED_APPS = [
     'viaje',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,5 +123,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+MEDIA_URL = 'images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images/')
+
+STATICFILES_DIRS = (
+    os.path.join(SITE_ROOT, 'viaje/static'),
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(SITE_ROOT, 'viaje/templates'),
+)

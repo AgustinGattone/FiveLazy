@@ -1,12 +1,33 @@
 {% extends 'base.html' %}
     {% block content %}
-        {% for paquete in paquetesvar %}
-            <div class="paquete">
-                <p>Nombre: {{ paquete.nombre }}</p>
-                <h1><a href="" >{{ paquete.hotel }}</a></h1>
-                <p>Precio: {{ paquete.precio|linebreaksbr }}</p>
-                <a><img src ="{{ paquete.imagen }}"></a>
+        <h3>Ofertas Especiales</h3>
+        <br>
+       {% for vuelo in vuelos %}
+            <div class="vuelo"> 
+                <div class="content"><div class="ic">Fivelazy</div>
+                    <div class="container_12">
+                            <div class="block2">
+                                <div class="title"> {{ vuelo.nombreDeVuelo }}</div>
+                                <img src="{{images}}{{vuelo.imagen}}" class="img_inner fleft">
+                                <div class="extra_wrapper">
+                                <div class="text1 col1"><a href="#">{{ vuelo.lugar }}</a></div>
+                                <p>{{ paquete.destino }} </p>
+                                <p>Precio: ${{ vuelo.precio}} </p>
+                                <a href="#" class="link1">Comprar Ahora</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>               
+                </div>
             </div>
+
+            <!-- <div class="vuelo">
+                <div class="title" {{ vuelo.nombreDeVuelo }}></div>
+                <h1><a href="" >{{ vuelo.lugar }}</a></h1>
+                <p>Precio: {{ vuelo.precio}}</p>
+                <a href="#">Comprar</a>
+                <img src= "{{vuelo.imagen}}">
+            </div>-->
         {% endfor %}
     {% endblock content %}
           

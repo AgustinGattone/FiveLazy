@@ -53,13 +53,13 @@ class Paquete(models.Model):
     nombre = models.CharField(max_length=200)
     precio = models.FloatField()
     imagen = models.ImageField(upload_to='viaje/static/images')
-
+    destino = models.ForeignKey('Destino')
     def __str__(self):
         return self.nombre
 
 class Destino(models.Model):
     destino = models.CharField(max_length=200)
-    descripcionDelDestino = models.TextField()
+    descripcionDelDestino = models.CharField(max_length=400, default= 'Breve descripcion')
 
     def __str__(self):
        return self.destino
