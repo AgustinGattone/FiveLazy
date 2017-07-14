@@ -76,10 +76,10 @@
                                 <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                                     <ul class="sf-menu">
                                         <li class="current"><a href="inicio/">INICIO</a></li>
-                                        <li><a href="vuelos/">VUELOS</a></li>
-                                        <li><a href="lista_hoteles">HOTELES</a></li>
-                                        <li><a href="excursiones/">EXCURSIONES</a></li>
-                                        <li><a href="paquetes/">PAQUETES</a></li>
+                                        <li><a href="{% url 'url.vuelos' %}">VUELOS</a></li>
+                                        <li><a href="{% url 'views.lista_hoteles' %}">HOTELES</a></li>
+                                        <li><a href="{% url 'views.lista_excursiones' %}">EXCURSIONES</a></li>
+                                        <li><a href="{% url 'views.lista_paquetes' %}">PAQUETES</a></li>
                                     </ul>
                                 </nav>
                             <div class="clear"></div>

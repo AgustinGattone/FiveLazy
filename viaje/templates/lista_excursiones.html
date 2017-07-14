@@ -2,10 +2,18 @@
     {% block content %}
         {% for excursion in excursiones %}
             <div class="excursion">
-                <p>Nombre de la excursion: {{ excursion.nombre }}</p>
-                <h1><a href="" >{{ excursion.lugar }}</a></h1>
-                <p>Precio: {{ excursion.precio|linebreaksbr }}</p>
-                <img src= "{{excursion.imagen}}">
+            <div class="content"><div class="ic">Fivelazy</div>
+                    <div class="container_12">
+                        <div class="block2">
+                            <div class="title"> {{ excursion.nombre }}</div>
+                            <h1><a href="" >{{ excursion.lugar }}</a></h1>
+                            <p>Precio: ${{ excursion.precio }} </p>
+                            <img src="{{excursion.imagen.url}}" class="img_inner fleft" style="width:200px;height: 200px;">
+                            <a href="#" class="link1">Comprar Ahora</a>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         {% endfor %}
     {% endblock content %}

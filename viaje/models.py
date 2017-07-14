@@ -19,7 +19,7 @@ class Vuelo(models.Model):
     lugar = models.ForeignKey('Destino')
     horaYFechaDeEmbarque = models.DateTimeField()
     precio = models.FloatField()
-    imagen = models.ImageField(upload_to='viaje/static/images')
+    imagen = models.ImageField(upload_to='')
 
     def __str__(self):
         return self.nombreDeVuelo
@@ -30,7 +30,7 @@ class Hotel(models.Model):
     nombre = models.CharField(max_length=200)
     lugar = models.ForeignKey('Destino')
     precio = models.FloatField()
-    imagen = models.ImageField(upload_to='viaje/static/images')
+    imagen = models.ImageField(upload_to='')
 
     def __str__(self):
         return self.nombre
@@ -40,7 +40,7 @@ class Excursion(models.Model):
     nombre = models.CharField(max_length=200)
     lugar = models.ForeignKey('Destino')
     precio = models.FloatField()
-    imagen = models.ImageField(upload_to='images/')
+    imagen = models.ImageField(upload_to='')
 
     def __str__(self):
         return self.nombre
@@ -52,7 +52,7 @@ class Paquete(models.Model):
     excursion = models.ForeignKey('Excursion')
     nombre = models.CharField(max_length=200)
     precio = models.FloatField()
-    imagen = models.ImageField(upload_to='viaje/static/images')
+    imagen = models.ImageField(upload_to='')
     destino = models.ForeignKey('Destino')
     def __str__(self):
         return self.nombre
@@ -69,7 +69,7 @@ class Destino(models.Model):
        
 
 class PaginaPrincipal(models.Model):
-    imagen = models.ImageField(upload_to='viaje/static/images')
+    imagen = models.ImageField(upload_to='')
     paquete = models.ForeignKey('Paquete')
 
     def __str__(self):

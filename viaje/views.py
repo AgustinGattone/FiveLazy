@@ -29,5 +29,13 @@ def inicio(request):
 
 
 def comprar(request):
-    form = ComprarVueloForm()
+    if request.method == 'POST':  # si el usuario está enviando el formulario con datos
+        form = ComprarVueloForm(request.POST)  # Bound form
+        if form.is_valid():
+            nueva_compra = form.save()  # Guardar los datos en la base de datos
+
+            return HttpResponseRedirect(reverse('upersonas:plist'))
+    else:
+        form = ComprarVueloForm()  # Unbound form
+
     return render (request, 'comprar.html', {'forms': form})

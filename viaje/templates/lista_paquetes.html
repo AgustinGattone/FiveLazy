@@ -2,10 +2,18 @@
     {% block content %}
         {% for paquete in paquetes %}
             <div class="paquete">
-                <p>Nombre del paquete: {{ paquete.nombre }}</p>
-                <h1><a href="" >{{ paquete.lugar }}</a></h1>
-                <p>Precio: {{ paquete.precio|linebreaksbr }}</p>
-                <img src= "{{paquete.imagen}}">
+                <div class="content"><div class="ic">Fivelazy</div>
+                    <div class="container_12">
+                        <div class="block2">
+                            <div class="title"> {{ paquete.nombre }}</div>
+                            <h1><a href="" >{{ paquete.lugar }}</a></h1>
+                            <p>Precio: ${{ paquete.precio}} </p>
+                            <img src="{{paquete.imagen.url}}" class="img_inner fleft">
+                            <a href="#" class="link1">Comprar Ahora</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         {% endfor %}
     {% endblock content %}
+
