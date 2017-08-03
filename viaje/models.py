@@ -24,6 +24,11 @@ class Vuelo(models.Model):
     def __str__(self):
         return self.nombreDeVuelo
 
+    def update(self):
+        obj = Vuelo.objects.create(val=1)
+        Vuelo.objects.filter(pk=obj.pk).update(val=F('val')+ 1)
+        obj.refresh_from_db()
+        self.assertEqual(obj.val, 2)
 
 
 class Hotel(models.Model):

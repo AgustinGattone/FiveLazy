@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^paquetes/', views.lista_paquetes, name="views.lista_paquetes"),
     url(r'comprar/$', views.comprar, name='views.comprar'),
 
+
     ]

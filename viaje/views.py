@@ -4,6 +4,7 @@ from .models import Excursion
 from .models import Hotel
 from .models import Paquete
 from .forms import ComprarVueloForm
+from .models import Destino
 
 # Create your views here.
 def lista_vuelos(request):
@@ -23,6 +24,7 @@ def lista_paquetes(request):
     return render(request, 'lista_paquetes.html', {'paquetes': paquetesvar})
 
 
+
 def inicio(request):
     iniciovar = Paquete.objects.all()
     return render (request, 'inicio.html', {'paquetes': iniciovar})
@@ -31,3 +33,5 @@ def inicio(request):
 def comprar(request):
     form = ComprarVueloForm()  # Unbound form
     return render(request, 'comprar.html', {'forms': form})
+
+
